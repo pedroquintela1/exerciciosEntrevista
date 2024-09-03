@@ -12,7 +12,7 @@ dias_com_faturamento = 0
 
 # Percorrendo sobre os dados para encontrar o menor, maior e somar os faturamentos
 for registro in faturamento_diario:
-  valor = registro["faturamento"]
+  valor = registro["valor"]
 
   if valor > 0:
     if valor < menor_faturamento:
@@ -29,12 +29,12 @@ media_mensal = soma_faturamento / dias_com_faturamento;
 # Calculando os dias com faturamento acima da média
 dias_acima_media = 0
 for registro in faturamento_diario:
-  valor = registro["faturamento"]
+  valor = registro["valor"]
   if valor > media_mensal:
     dias_acima_media += 1
 
 # Imprimindo os resultados
 print(f"Menor faturamento: R${menor_faturamento:.2f}")
 print(f"Maior faturamento: R${maior_faturamento:.2f}")
-print(f"Média mensal: R${media_mensal:.2f}")
+print(f"Média de faturamento mensal: R${media_mensal:.2f}")
 print(f"Dias com faturamento acima da média: {dias_acima_media}")
